@@ -1,4 +1,4 @@
-const Shape = require("../models/ShapeModel");
+const Shape = require("../models/shapeModel");
 
 // post data
 const createShape = async (req, res) => {
