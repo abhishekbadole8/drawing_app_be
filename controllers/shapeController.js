@@ -36,6 +36,16 @@ const getAllShapes = async (req, res) => {
   }
 };
 
+//    delete all
+const deleteAllShapes = async (req, res) => {
+  try {
+    // delete all shapes
+    await Shape.deleteMany();
 
+    res.status(200).json({ message: "All shapes deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
-module.exports = { createShape, getAllShapes };
+module.exports = { createShape, getAllShapes,deleteAllShapes };
